@@ -1,0 +1,49 @@
+---
+import Card from "../components/BlogCard.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <Card />
+    <slot />
+  </body>
+</html>
+
+<style>
+  @font-face {
+    font-family: "Sora";
+    src: url("/fonts/Sora-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 800;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    font-family: "Sora", system-ui, sans-serif;
+    background-color: #fafaf9;
+  }
+
+  body {
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+</style>
