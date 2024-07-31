@@ -1,5 +1,5 @@
 ---
-import Card from "../../components/frontendMentor/qrCodeComponent.astro";
+import Qr from "../../components/frontendMentor/qrCodeComponent.astro";
 
 interface Props {
   title: string;
@@ -19,18 +19,18 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
-    <Card />
+    <Qr />
     <slot />
   </body>
 </html>
 
 <style>
-  /*@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
   html {
-    font-family: "Figtree", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
-    background-color: #f4d04e;
+    background-color: #D5E1EF;
   }
 
   body {
@@ -39,8 +39,8 @@ const { title, description } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: center;
-  }*/
-
+  }
+  
   * {
     box-sizing: border-box;
   }
