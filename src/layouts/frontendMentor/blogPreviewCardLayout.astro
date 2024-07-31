@@ -1,0 +1,47 @@
+---
+import Card from "../../components/frontendMentor/blogPreviewCardComponent.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <Card />
+    <slot />
+  </body>
+</html>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+  html {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #f4d04e;
+  }
+
+  body {
+    width: 1440px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+</style>
