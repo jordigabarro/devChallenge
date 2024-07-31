@@ -1,6 +1,5 @@
 ---
-import NavDevChallenges from "../components/NavDevChallenges.astro";
-import NavFrontendMentor from "../components/NavFrontendMentor.astro";
+import Card from "../components/minimalBlogCardComponent.astro";
 
 interface Props {
   title: string;
@@ -20,25 +19,31 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
-    <h1>{title}</h1>
-    <p>
-      Projects from <a href="https://www.frontendmentor.io/" target="_blank"
-        >frontendmentor</a
-      >
-    </p>
-    <NavFrontendMentor />
-    <p>
-      Projects from <a href="https://devchallenges.io/" target="_blank"
-        >devchallenges</a
-      >
-    </p>
-    <NavDevChallenges />
-
+    <Card />
     <slot />
   </body>
 </html>
 
 <style>
+  @font-face {
+    font-family: "Sora";
+    src: url("/fonts/Sora-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 800;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    font-family: "Sora", system-ui, sans-serif;
+    background-color: #fafaf9;
+  }
+
+  body {
+    width: 1280px;
+    height:100vh;
+    margin: 0 auto;
+  }
+
   * {
     box-sizing: border-box;
   }

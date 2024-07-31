@@ -1,5 +1,5 @@
 ---
-import Card from "../components/BlogCard.astro";
+import Card from "../components/blogPreviewCardComponent.astro";
 
 interface Props {
   title: string;
@@ -25,22 +25,20 @@ const { title, description } = Astro.props;
 </html>
 
 <style>
-  @font-face {
-    font-family: "Sora";
-    src: url("/fonts/Sora-VariableFont_wght.ttf") format("truetype");
-    font-weight: 100 800;
-    font-style: normal;
-    font-display: swap;
-  }
+  @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 
   html {
-    font-family: "Sora", system-ui, sans-serif;
-    background-color: #fafaf9;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #f4d04e;
   }
 
   body {
-    width: 1280px;
-    margin: 0 auto;
+    width: 1440px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   * {
