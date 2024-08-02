@@ -1,0 +1,131 @@
+<div class="centered-div">
+    <div class="image"></div>
+    <p class="name">Jessica Randall</p>
+    <p class="location">London, United Kingdom</p>
+    <p class="description">"Front-end developer and avid reader."</p>
+    <div class="links">
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">Frontend Mentor</a>
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">Twitter</a>
+        <a href="#" target="_blank">Instagram</a>
+    </div>
+</div>
+
+<style>
+    :root {
+        --grey-800: hsl(0, 0%, 12%);
+        --grey-700: hsl(0, 0%, 20%);
+        --grey-900: hsl(0, 0%, 8%);
+        --white-color: hsl(0, 0%, 100%);
+        --green-color: hsl(75, 94%, 57%);
+    }
+
+    p {
+        margin: 0;
+        line-height: 120%;
+        letter-spacing: 0px;
+    }
+
+    .centered-div {
+        width: 288px;
+        height: 490px;
+        margin: 0 auto; /* para visualizar el div centrado */
+        background-color: var(--grey-800);
+        border-radius: 20px;
+        padding: 37px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 75px;
+        height: 75px;
+        background-image: url("/images/socialLinksProfile/avatar-jessica.jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: hsl(0, 0%, 12%);
+        border-radius: 50%;
+    }
+    .name {
+        font-size: 25px;
+        font-weight: 500;
+        color: var(--white-color);
+        margin-top: 25px;
+    }
+
+    .location {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--green-color);
+        margin-top: 10px;
+    }
+
+    .description {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--white-color);
+        margin-top: 25px;
+    }
+
+    .links {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        align-self: stretch;
+    }
+
+    .links a {
+        display: flex; /* Activa flexbox para el enlace */
+        align-items: center; /* Centra verticalmente el texto */
+        justify-content: center;
+        background-color: var(--grey-700);
+        width: 300px;
+        height: 40px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--white-color);
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .links a:hover {
+        background-color: var(--green-color);
+        color: black;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .centered-div {
+            width: 200px;
+            height: 423px;
+            padding: 20px;
+        }
+        .image {
+            width: 55px;
+            height: 55px;
+        }
+        .name {
+            font-size: 22px;
+        }
+
+        .location {
+            font-size: 12px;
+        }
+
+        .description {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .links a {
+            width: 200px;
+            height: 30px;
+            border-radius: 8px;
+            font-size: 12px;
+        }
+    }
+</style>

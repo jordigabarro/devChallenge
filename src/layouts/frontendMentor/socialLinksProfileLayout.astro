@@ -1,0 +1,47 @@
+---
+import Qr from "../../components/frontendMentor/socialLinksProfileComponent.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <Qr />
+    <slot />
+  </body>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+  html {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    background-color: hsl(0, 0%, 8%);
+  }
+
+  body {
+    width: 1440px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
